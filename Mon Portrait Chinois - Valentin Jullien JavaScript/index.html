@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="img/circle.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@700&family=Quicksand&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>PORTRAIT CHINOIS - Valentin Jullien</title>
+</head>
+
+<body>
+
+    <div class="contenu">
+        <!-- Bouton pour retouner vers le haut de la page -->
+        <a class="bouton-top" href="#top">
+            <svg src="img/direction.svg" width="24" height="20">
+                <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
+            </svg>
+        </a>
+
+        <section>
+            <!-- Haut de page -->
+                <p class="NOM">VALENTIN JULLIEN</p>
+                <div class="title">
+                    <h1> Mon Portrait Chinois </h1>
+                    <div class="déf"> Dans le domaine littéraire, un portrait chinois est un jeu permettant de déceler
+                    certains aspects de la personnalité d'un individun, ou d'identifier ses goûts, au travers d'un
+                    questionnaire basé sur l'identification à des personnes, des objets ou des éléments divers. 
+                </div>
+                </div>
+                <div class="float">
+                    <a href="#liste-analogies"><div class="arrow"></div></a>
+                </div>
+        </section>
+
+        <!-- Toutes mes analogies -->
+        <div class="inline-photo show-on-scroll">
+            <div class="liste-analogies" id="liste-analogies">
+            </div>
+        </div>
+
+        <!-- Invitation à crée son analogie -->
+
+        <section>
+            <div class="container" >
+                <div class="titre">
+                    <h4> C'est à votre tour </h4>
+                </div>
+                <div class="centrer">
+                    <a href="#Formulaire"><div class="button2">↓ Créer une catégorie ↓</div></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulaire -->
+        <section class="form" id="Formulaire">
+            <main class="styleform">
+                <form action="" method="post">
+                    <h3>Mail</h3>
+                    <input type="email" placeholder="Votre mail" id="courriel" required>
+                    <h3>Si j'étais ...</h3>
+                    <input type="text" placeholder="(ex: Un fruit etc...)" id="analogie" required>
+                    <h3>Je serais ...</h3>
+                    <input type="text" placeholder="(ex: Une pastèque etc...)" id="valeurAnalogie" required>
+                    <h3>Images</h3>
+                    <input type="url" id="imganalogie" name="imganalogie" placeholder="URL d'une image" required>
+                    <h3>Arguments</h3>
+                    <input class="arg" type="text" placeholder="(ex: Parce que ...)" id="arganalogie">
+                    <input type="button" id="envoi" value="Envoyer le message !">
+                    <div id="messageApresEnvoi"></div>
+                </form>
+            </main>
+        </section>
+        <!--Les si j'étais je serais des utilisateurs -->
+
+        <!-- Analogie des utilisateurs -->
+
+        <section id="votreformulaire">
+            <h2>Si j’étais <span id="analogieSuggérée"></span>, je serais <span id="valeurAnalogieSuggérée"></span>.
+            </h2>
+        </section>
+
+        <!-- Mentions légales -->
+
+        <section>
+            <footer class="volet-visible">
+                <div class="volet-invisible">
+                    <h2 class="mention-legale"> Mentions légales</h2>
+                    <div class="contenu-footer">
+                        <div class="block footer-services">
+                            <h4> Travail </h4>
+                            <ul class="liste-services">
+                                <li> Directeur de la publication : Valentin Jullien, étudiant de l’Université Gustave
+                                    Eiffel </li>
+                                    <br>
+                                <li> Projet réalisé dans le cadre d'un projet en BUT MMI à l'IUT de Champs-sur-Marne </li>
+                                <br>
+                                <li> Encadrement : Gaëlle CHARPENTIER - Matthieu BERTHET - Philippe GAMBETTE </li>
+                                <br>
+                                <li> Développement et écriture: Valentin Jullien </li>
+                                <li> Conception graphique : Valentin Jullien </li>
+                                <li> Hébergeur : Université Gustave Eiffel </li>
+                                <br>
+                                <li> Université Gustave Eiffel : 5 boulevard Descartes - Champs-sur-Marne - 77454
+                                    Marne-la-Vallée Cedex2 </li>
+                                    <br>
+                                <li> © 2022 Valentin JULLIEN </li>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="block footer-contact">
+                            <h4>Contact</h4>
+                            <ul class="liste-contact">
+                                <li>
+                                    valentin.jullien655@gmail.com
+                                </li>
+                                <li>
+                                    Tél : 00.00.00.00.00
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="block footer-horaire">
+                            <h4>Horaire</h4>
+                            <ul class="liste-horaire">
+                                <li> ✔️ Lun 8h10-17h45 </li>
+                                <li> ✔️ Mar 8h10-17h45 </li>
+                                <li> ✔️ Mer 8h10-17h45 </li>
+                                <li> ✔️ Jeu 8h10-17h45 </li>
+                                <li> ✔️ Ven 8h10-17h45 </li>
+                                <li> ❌ Sam Repos </li>
+                                <li> ❌ Dim Repos </li>
+                            </ul>
+                        </div>
+
+                        <div class="block footer-réseaux">
+                            <h4>Mes réseaux</h4>
+                            <ul class="liste-réseaux">
+                                <li>
+                                    <p> <a href="https://www.linkedin.com/in/valentin-jullien-78abb1221/">
+                                            <div class="réseaux"> <img src="img/Linkedin.png" alt="Logo Linkedin">
+                                            </div> Linkedin
+                                        </a> </p>
+                                </li>
+                                <li> <a href="https://www.youtube.com/channel/UC8sa8FBQwdwZVF9K7RvWs3Q">
+                                        <div class="réseaux"> <img src="img/Youtube.png" alt="Logo Youtube"> </div>
+                                        Youtube
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+        </section>
+    </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,674 @@
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #01263a;
+    font-family: quicksand, sans-serif;
+    /* background: linear-gradient(90deg, #01476d 0%, #01263a 100%); */
+    /* Codepen.io */
+    /* cssgradient.io */
+    /* background-size: 400% 400%; */
+    /* animation: gradient 10s ease infinite; */
+    transition: all 750ms !important;
+    margin: 0%;
+}
+
+/* Scroll bar pérsonnalisée */
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #01263a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00659b;
+    border-radius: 10px;
+}
+
+/* Fin Scroll bar pérsonnalisée */
+
+section {
+    max-width: 100vw;
+    height: 130vh;
+    /* padding-top: 10px; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Bouton pour revenir en haut de la page qui se trouve en bas a droite de la page */
+
+.bouton-top {
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+    margin: 20px;
+    cursor: pointer;
+    fill: #f1f1f1;
+}
+
+/* Mon Prénom et Nom écrit en haut de la page */
+
+.NOM {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+    padding-top: 20px;
+}
+
+/* Texte Mon Portrait Chinois */
+
+.title {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 80px;
+}
+
+h1 {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    width: 9em;
+    animation: slide 2s ease;
+}
+
+@keyframes slide {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+/* Animation pour faire apparaitre les éléments */
+
+/* .inline-photo {
+    border: 1em solid #fff;
+    border-bottom: 4em solid #fff;
+    border-radius: .25em;
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    margin: 2em auto;
+    opacity: 0;
+    transform: translateY(4em) rotateZ(-5deg);
+    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                opacity .3s .25s ease-out;
+    max-width: 600px;
+    width: 90%;
+    will-change: transform, opacity;
+  }
+
+.inline-photo.is-visible {
+    opacity: 1;
+    transform: rotateZ(-2deg);
+} */
+
+/* Bloc de texte pour défnir le portrait chinois */
+
+.déf {
+    opacity: 0;
+    color: #0985c8;
+    /* text-transform : uppercase; */
+    font-size: 1.5em;
+    text-align: justify;
+    width: 40%;
+    /* background-color: #00659b; */
+    /* border-radius: 20px; */
+    margin: auto;
+    margin-bottom: 50px;
+    /* padding: 30px; */
+    /* box-shadow: 0 10px 20px rgb(0 0 0 / 50%); */
+    /* animation: translateY 2s ease-out; */
+    animation: fadeIn 2s ease 2s forwards;
+}
+
+@keyframes translateY {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes floatNoShadow {
+    0% {
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+    50% {
+        -webkit-transform: translatey(-5px);
+        transform: translatey(-5px);
+    }
+    
+    100% {
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
+
+.arrow {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    border-right: 2px solid #F3F3F3;
+    border-bottom: 2px solid #F3F3F3;
+    border-bottom-right-radius: 2px;
+    color: #f1f1f1;
+    animation: fadeIn 2s ease 2.5s forwards;
+    transition: all 750ms !important;
+    margin: 0 auto;
+}
+
+.float {
+    animation: float2 4s ease-out infinite;
+}
+
+/* Titre: "C'est à votre tour" */
+
+/* Bouton "COMMENCER" */
+
+a {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.fp-enabled body, html.fp-enabled {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.centrer {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.titre {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* padding-top: 100px; */
+    text-align: center;
+    color: white;
+    font-size: 5em;
+}
+
+a.scroll {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    color: white;
+    animation: float 4s ease-out infinite;
+}
+
+/*la flèche est dessinée à partir de bordures auxquelles on applique ensuite une rotation de 45 degrés*/
+
+a.scroll span {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+    animation: float 4s ease-out infinite;
+}
+
+@keyframes btnscroll {
+    0% {
+
+        transform: rotate(-45deg) translate(0, 0);
+    }
+
+    20% {
+
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    40% {
+
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+/* Codepen.io */
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 20%);
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 20px 15px 0 rgb(0 0 0 / 20%);
+        -webkit-transform: translatey(-5px);
+        transform: translatey(-5px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 20%);
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+
+    50% {
+        -webkit-transform: translatey(-5px);
+        transform: translatey(-5px);
+    }
+
+    100% {
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
+
+/* Mes différent textes explicatifs */
+
+h3 {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #0985c8;
+    padding-top: 30px;
+}
+
+span {
+    font-weight: bold;
+    width: 100%;
+}
+
+.analogies {
+    font-weight: 800;
+    color: #f1f1f1;
+    width: 100%;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+    h1 {
+        margin: auto;
+        margin-top: 90px;
+        margin-bottom: 90px;
+        font-size: 3em;
+        width: 9em;
+    }
+}
+
+.liste-analogies {
+    text-align: center;
+}
+
+.flex-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 180px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.flex-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    margin-top: 180px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* Bloc de texte droite */
+
+.texte_d {
+    font-size: 1.5em;
+    text-align: justify;
+    padding: 50px;
+    background-color: #00659b;
+    border-radius: 20px;
+    /* top: 20%;
+    left: 40%; */
+    /* height: auto; */
+    width: 50%;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+}
+
+/* Bloc de texte gauche */
+
+.texte_g {
+    font-size: 1.5em;
+    text-align: justify;
+    padding: 50px;
+    background-color: #00659b;
+    border-radius: 20px;
+    /* top: 20%;
+    left: 40%; */
+    /* height: auto; */
+    width: 50%;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+}
+
+/* Mes différentes images */
+
+.images-gauche {
+    /* position: relative; */
+    /* right: 30%;
+    bottom: 15%; */
+    /* text-align: justify; */
+    border-radius: 40px;
+    width: 35vh;
+    height: 35vh;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+    animation: float 4s ease-out infinite;
+}
+
+.images-droite {
+    /* position: relative;
+    left: 30%;  
+    bottom: 15%; */
+    /* text-align: justify; */
+    border-radius: 40px;
+    width: 35vh;
+    height: 35vh;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+    animation: float 4s ease-out infinite;
+}
+
+@media screen and (max-width: 1025px) {
+    .déf {
+        font-size: 1.5em;
+        width: 60%;
+    }
+
+    section {
+        scroll-snap-align: none;
+        scroll-snap-stop: none;
+        height: 113vh;
+    }
+
+    .sec {
+        /* max-width: 100vw;
+        height: 130vh; */
+        text-align: center;
+        /* font-size: 3em; */
+    }
+
+    .flex-right, .flex-left {
+        flex-direction: column;
+        margin-top: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 1vh;
+        color: #0985c8;
+    }
+
+    .images-droite {
+        /* min-width: 210px;
+        min-height: 210px;
+        position: relative;
+        top: 2.5vh; */
+        width: 45vh;
+        height: 45vh;
+        margin-bottom: 45px;
+    }
+
+    .images-gauche {
+        /* min-width: 210px;
+        min-height: 210px;
+        position: relative;
+        top: 2.5vh; */
+        width: 45vh;
+        height: 45vh;
+        margin-bottom: 45px;
+    }
+
+    .texte_g {
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    .texte_d {
+        width: 100%;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .flex-right, .flex-left {
+        /* margin-top: 180px; */
+        margin-left: 55px;
+        margin-right: 55px;
+    }
+
+    section {
+        scroll-snap-align: none;
+        scroll-snap-stop: none;
+        height: 100vh;
+    }
+
+    .déf {
+        font-size: 1em;
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .images-droite {
+        width: 35vh;
+        height: 35vh;
+    }
+
+    .images-gauche {
+        width: 35vh;
+        height: 35vh;
+    }
+
+    .texte_g {
+        font-size: 1em;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .texte_d {
+        font-size: 1em;
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+/* Fin Mes différents textes explicatifs */
+
+/* Bouton " Créer une catégorie" */
+
+.button2 {
+    text-align: center;
+    width: 100%;
+    border-radius: 40px;
+    color: #f1f1f1;
+    padding-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-bottom: 1em;
+    border: 2px solid #f7f7f7;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+    animation: float 4s ease-out infinite;
+}
+
+p {
+    color: white;
+    /* font-size: 1.5em;
+    text-align: justify; */
+}
+
+/* Mon Formulaire */
+
+form {
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+input {
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+/* Mention légale et intérieur du volet */
+
+.mention-legale {
+    text-align: center;
+    color: white;
+    height: 100px;
+    margin: auto;
+    margin-bottom: -50px;
+}
+
+img {
+    width: 10%;
+}
+
+.volet-visible {
+    height: auto;
+    overflow: visible;
+}
+
+.volet-invisible {
+    height: 4em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Le Designer du Web (Créer un footer en HTML/CSS) */
+
+/* .contenu {
+    flex: 1 0 auto;
+} */
+
+footer {
+    flex-shrink: 0;
+    border-top: 1px solid #f1f1f1;
+    width: 100%;
+    background: #00659b;
+    color: #f1f1f1;
+}
+
+.contenu-footer {
+    width: 1200px;
+    text-align: ju;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 50px 0 100px;
+}
+
+.block {
+    width: 35%;
+}
+
+/* Services */
+.liste-contact,
+.liste-services,
+.liste-horaire,
+.liste-réseaux {
+    list-style-type: none;
+}
